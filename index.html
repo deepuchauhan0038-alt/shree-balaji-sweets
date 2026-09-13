@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shree Balaji Sweets - Sweet Weight Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER / BANNER ================= -->
+    <header class="shop-header">
+
+        <div class="header-content">
+
+            <div class="balaji-logo">
+                ॐ
+            </div>
+
+            <div class="shop-title">
+                <h1>श्री बालाजी</h1>
+                <h2>स्वीट्स</h2>
+                <p>मिठास ऐसी, जो रिश्तों को मीठा बनाए</p>
+            </div>
+
+            <div class="sweet-icon">
+                🍬
+            </div>
+
+        </div>
+
+        <div class="shop-address">
+            📍 मेन बस स्टैंड शिकारपुर, हिसार, नियाना रोड
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="main-container">
+
+        <div class="calculator-heading">
+
+            <div class="heading-icon">
+                🍮
+            </div>
+
+            <h2>Sweet Weight Calculator</h2>
+
+            <p>
+                Quickly calculate the weight or price of your favorite sweets.
+            </p>
+
+        </div>
+
+
+        <!-- ================= SINGLE CALCULATOR BOX ================= -->
+        <section class="calculator-card">
+
+            <!-- Calculator Mode -->
+            <div class="mode-buttons">
+
+                <button
+                    id="rateToWeightBtn"
+                    class="mode-btn active"
+                    type="button">
+                    ₹ Rate → Weight
+                </button>
+
+                <button
+                    id="weightToPriceBtn"
+                    class="mode-btn"
+                    type="button">
+                    Weight → ₹ Price
+                </button>
+
+            </div>
+
+
+            <!-- ================= RATE TO WEIGHT ================= -->
+            <div id="rateToWeightSection" class="calculator-section">
+
+                <div class="input-group">
+
+                    <label for="sweetRate">
+                        <span class="input-icon">🏪</span>
+                        Sweet Price (₹ per 1 kg)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="sweetRate"
+                        placeholder="Enter 1 kg price"
+                        min="0"
+                        step="0.01"
+                        inputmode="decimal"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="amountGiven">
+                        <span class="input-icon">₹</span>
+                        Amount Given (₹)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="amountGiven"
+                        placeholder="Enter amount"
+                        min="0"
+                        step="0.01"
+                        inputmode="decimal"
+                    >
+
+                </div>
+
+
+                <button
+                    id="calculateWeightBtn"
+                    class="calculate-btn"
+                    type="button">
+
+                    🧮 Calculate
+
+                </button>
+
+
+                <div class="result-box">
+
+                    <div class="result-icon">
+                        ⚖️
+                    </div>
+
+                    <div class="result-content">
+
+                        <span>Weight of Sweet</span>
+
+                        <strong id="weightResult">
+                            0 g
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= WEIGHT TO PRICE ================= -->
+            <div
+                id="weightToPriceSection"
+                class="calculator-section hidden">
+
+                <div class="input-group">
+
+                    <label for="sweetRate2">
+                        <span class="input-icon">🏪</span>
+                        Sweet Price (₹ per 1 kg)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="sweetRate2"
+                        placeholder="Enter 1 kg price"
+                        min="0"
+                        step="0.01"
+                        inputmode="decimal"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="weightGiven">
+                        <span class="input-icon">⚖️</span>
+                        Weight
+                    </label>
+
+                    <div class="weight-input">
+
+                        <input
+                            type="number"
+                            id="weightGiven"
+                            placeholder="Enter weight"
+                            min="0"
+                            step="0.01"
+                            inputmode="decimal"
+                        >
+
+                        <select id="weightUnit">
+                            <option value="g">Gram</option>
+                            <option value="kg">Kg</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="calculatePriceBtn"
+                    class="calculate-btn"
+                    type="button">
+
+                    🧮 Calculate
+
+                </button>
+
+
+                <div class="result-box">
+
+                    <div class="result-icon price-icon">
+                        ₹
+                    </div>
+
+                    <div class="result-content">
+
+                        <span>Price of Sweet</span>
+
+                        <strong id="priceResult">
+                            ₹ 0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="shop-footer">
+
+        <div class="footer-decoration">
+            ✦ ───────── ✦
+        </div>
+
+        <h3>श्री बालाजी स्वीट्स</h3>
+
+        <p>
+            हर त्योहार, हर मौके पर —<br>
+            श्री बालाजी स्वीट्स के साथ
+        </p>
+
+        <div class="footer-decoration">
+            ✦ ───────── ✦
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
